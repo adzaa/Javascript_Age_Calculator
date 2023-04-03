@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--of-white);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+
+    --of-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+hr {
+    border: 1px solid var(--smokey-grey);
+    width: 100%;
+    margin: 0;
+}
+
+.calculator-container {
+    background-color: var(--white);
+    height: auto;
+    max-width: 840px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 60px;
+    border-bottom-right-radius: 200px;
+    margin: 30px;
+}
+
+.input {
+    max-width: 550px;
+    width: 100%;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    color: var(--smokey-grey)
+}
+
+.input-container label {
+    letter-spacing: 3px;
+}
+
+.input-container input {
+    height: 70px;
+    font-size: 32px;
+    max-width: 160px;
+    width: 100%;
+    padding-left: 20px;
+    border-radius: 10px;
+    outline: none;
+    color: var(--off-black);
+    border: 1px solid var(--light-grey);
+    margin-top: 10px;
+}
+
+.input-container input:focus {
+    border: 1px solid var(--purple)
+}
+
+.divider {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 730px !important;
+    width: 100% !important;
+}
+
+.divider img {
+    width: 50px;
+    height: 50px;
+}
+
+.divider button {
+    background-color: var(--purple);
+    border: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.divider button:hover {
+    background-color: var(--off-black);
+    transition: 0.2s;
+}
+
+.output  {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 90px;
+}
+
+.output span {
+    color: var(--purple);
+    letter-spacing: 15px;
+}
+
+.output p {
+    color: var(--off-black);
+}
+
+.error {
+    display: none;
+    margin: 0 !important;
+    color: var(--light-red);
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+    margin-top: 10px !important;
+    font-size: 14px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 812px) {
+    .divider button {
+        position: absolute;
+    }
+    .divider {
+        justify-content: center;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .output {
+        font-size: 100px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 671px) {
+    .output {
+        font-size: 80px;
+    }
+    .input-container input {
+        max-width: 130px;
+    }
+}
+
+@media only screen and (max-width: 571px) {
+    .output {
+        line-height: 60px;
+        font-size: 60px;
+    }
+    .input-container input {
+        max-width: 110px;
+        padding-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 469px) {
+    .output {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .input-container input {
+        max-width: 80px;
+        padding-left: 5px;
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .input-container input {
+        max-width: 70px;
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .output {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .input {
+        flex-direction: column !important;
+    }
+    .input-container input {
+        max-width: fit-content;
+        font-size: 22px;
+    }
+    .input-container:nth-child(2), .input-container:nth-child(3) {
+        margin-top: 30px;
+    }
+}

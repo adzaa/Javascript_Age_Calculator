@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <main
+      class="h-100 w-100 d-flex justify-content-center align-items-center flex-direction-column"
+    >
+      <div class="calculator-container">
+        <div class="input d-flex flex-direction-row justify-content-between">
+          <div class="input-container">
+            <label for="day">Day</label>
+            <input type="txt" id="day" placeholder="DD" />
+            <p class="error"></p>
+          </div>
+          <div class="input-container">
+            <label for="month">Month</label>
+            <input type="txt" id="month" placeholder="MM" />
+            <p class="error"></p>
+          </div>
+          <div class="input-container">
+            <label for="year">Year</label>
+            <input type="txt" id="year" placeholder="YYYY" />
+            <p class="error"></p>
+          </div>
+        </div>
+        <div class="divider">
+          <hr />
+          <button id="btn">
+            <img src="./assets/images/icon-arrow.svg" alt="arrow" />
+          </button>
+        </div>
+        <div class="output">
+          <p><span>--</span>years</p>
+          <p><span>--</span>months</p>
+          <p><span>--</span>days</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="abdulah-dzankic.netlify.app/">Abdulah Džankić</a>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+    crossorigin="anonymous"
+  ></script>
+  <script src="index.js"></script>
+</html>
